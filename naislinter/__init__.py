@@ -7,7 +7,6 @@ except ImportError:
 
 import argparse
 import requests
-from pybars import Compiler
 from naislinter import linter
 
 
