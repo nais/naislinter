@@ -13,7 +13,7 @@ from naislinter import linter
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        "nais-linter", description="Validates naiserator yaml files"
+        "naislinter", description="Validates naiserator yaml files"
     )
     parser.add_argument("input", type=str, help="The input naiserator yaml file")
 
