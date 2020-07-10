@@ -8,7 +8,7 @@ To set up this as a GitHub Action, add the following as a step in your workflow:
 
 ```yaml
     - name: naislint nais.yaml
-      uses: nais/naislinter@v1.0.2
+      uses: nais/naislinter@v1.0.3
       env:
         RESOURCE: nais.yaml
 ```
