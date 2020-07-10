@@ -1,4 +1,4 @@
-def check_keys(target, reference, error=False, trail=[]):
+def check_keys(target, reference, errors, trail):
     for key in target.keys():
         trail.append(key)
         trail_string = ".".join(trail)
@@ -6,9 +6,13 @@ def check_keys(target, reference, error=False, trail=[]):
             trail.pop()
             continue
         if key not in reference["properties"].keys():
-            print(f"Field outside of spec: {trail_string}")
-            error = True
+            errors.append(trail_string)
         if isinstance(target[key], dict):
-            check_keys(target[key], reference["properties"][key], error, trail)
+            if key in reference["properties"]:
+                errors = check_keys(
+                    target[key], reference["properties"][key], errors, trail
+                )
+            else:
+                errors = check_keys(target[key], reference, errors, trail)
         trail.pop()
-    return error
+    return errors

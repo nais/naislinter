@@ -7,6 +7,7 @@ except ImportError:
 
 import argparse
 import requests
+import sys
 from naislinter import linter
 
 
@@ -39,7 +40,14 @@ def main():
     infile = parse_args()
     target = get_target(infile)
     reference = fetch_reference()
-    if linter.check_keys(target, reference):
+    faults = linter.check_keys(target, reference, [], [])
+    if len(faults) > 0:
+        print("Found keys outside of the NAIS spec", file=sys.stderr)
+        for fault in faults:
+            print(f"\t{fault}", file=sys.stderr)
+        print(
+            "You may want to refer to https://doc.nais.io/nais-application/nais.yaml/reference"
+        )
         exit(1)
 
 

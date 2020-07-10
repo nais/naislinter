@@ -1,0 +1,3 @@
+import naislinter
+
+naislinter.main()
