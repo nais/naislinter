@@ -4,7 +4,17 @@ A simple Python script to validate that your NAIS yaml file adheres to the NAIS 
 
 ## GitHub Action
 
-**Note**: This is not ready. Please don't attempt to use this as an action yet!
+To set up this as a GitHub Action, add the following as a step in your workflow:
+
+```yaml
+    - name: naislint nais.yaml
+      uses: nais/naislinter@v1.0.2
+      env:
+        RESOURCE: nais.yaml
+```
+
+The action follows the same footprint as [`nais/deploy`](https://doc.nais.io/deployment#deploy-with-github-actions)
+for injecting variables to templates, however some environment variables are not required, such as `APIKEY`, `CLUSTER`.
 
 ## Local installation
 
