@@ -40,6 +40,7 @@ a deployment if the NAIS yaml file is malformed in this fashion.
 
 Additionally, this tool requires a fully formed NAIS yaml file, after any template injections.
 A file containing `{{ image }}` will therefore fail, unless the variable has been injected.
+This is not relevant in the GitHub Action, as template injection happens before `naislinter` runs.
 
 Finally, in its current state, the tool is unable to verify objects within lists. For instance:
 
