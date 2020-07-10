@@ -2,6 +2,10 @@
 
 A simple Python script to validate that your NAIS yaml file adheres to the NAIS specifications.
 
+## GitHub Action
+
+**Note**: This is not ready. Please don't attempt to use this as an action yet!
+
 ## Local installation
 
 ```bash
