@@ -8,7 +8,7 @@ with open(path.join(this_directory, "README.md")) as f:
 
 setup(
     name="naislinter",
-    version="1.0.2",
+    version="1.0.3",
     license="MIT",
     url="https://github.com/chinatsu/naislinter",
     description="Lints naiserator.yaml files",

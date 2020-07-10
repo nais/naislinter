@@ -46,7 +46,8 @@ def main():
         for fault in faults:
             print(f"\t{fault}", file=sys.stderr)
         print(
-            "You may want to refer to https://doc.nais.io/nais-application/nais.yaml/reference"
+            "You may want to refer to https://doc.nais.io/nais-application/nais.yaml/reference",
+            file=sys.stderr,
         )
         exit(1)
 

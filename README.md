@@ -19,13 +19,13 @@ for injecting variables to templates, however some environment variables are not
 ## Local installation
 
 ```bash
-$ pip install naislinter
+pip install naislinter
 ```
 
 ## Local usage
 
 ```bash
-$ naislinter nais.yaml
+naislinter nais.yaml
 ```
 
 Will print any path in the config tree that falls outside of the spec and return a non-zero code if any were encountered.
