@@ -1,6 +1,6 @@
 name: 'naislinter'
 description: 'verifies that your NAIS yaml file follows the NAIS spec'
-author: 'chinatsu'
+author: 'nais'
 branding:
     color: 'purple'
     icon: 'thermometer'
